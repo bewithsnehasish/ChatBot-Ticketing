@@ -1,0 +1,1 @@
+checking working directory for file /home/ubuntu/workspace/neo-tree-browser/frontend/src/images/locations/NewDelhi/NationalGalleryMordernArt/file.txt
