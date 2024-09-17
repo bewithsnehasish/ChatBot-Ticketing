@@ -1,0 +1,214 @@
+{
+  "locations": [
+    {
+      "name": "New Delhi",
+      "type": "Capital",
+      "museums": [
+        {
+          "name": "National Museum",
+          "description": "The National Museum in New Delhi is one of the largest museums in India, showcasing a vast collection of artifacts from prehistoric to modern times.",
+          "location": "Janpath, New Delhi",
+          "photos": [
+            "https://example.com/national-museum-delhi-1.jpg",
+            "https://example.com/national-museum-delhi-2.jpg",
+            "https://example.com/national-museum-delhi-3.jpg",
+            "https://example.com/national-museum-delhi-4.jpg",
+            "https://example.com/national-museum-delhi-5.jpg"
+          ]
+        },
+        {
+          "name": "National Gallery of Modern Art",
+          "description": "The National Gallery of Modern Art (NGMA) is the premier art gallery under the Ministry of Culture, housing a vast collection of modern and contemporary Indian art.",
+          "location": "Jaipur House, India Gate, New Delhi",
+          "photos": [
+            "https://example.com/ngma-delhi-1.jpg",
+            "https://example.com/ngma-delhi-2.jpg",
+            "https://example.com/ngma-delhi-3.jpg",
+            "https://example.com/ngma-delhi-4.jpg",
+            "https://example.com/ngma-delhi-5.jpg"
+          ]
+        },
+        {
+          "name": "Indira Gandhi Memorial Museum",
+          "description": "This museum is dedicated to the life and work of former Prime Minister Indira Gandhi, showcasing personal artifacts and photographs from her life.",
+          "location": "1 Safdarjung Road, New Delhi",
+          "photos": [
+            "https://example.com/indira-gandhi-museum-1.jpg",
+            "https://example.com/indira-gandhi-museum-2.jpg",
+            "https://example.com/indira-gandhi-museum-3.jpg",
+            "https://example.com/indira-gandhi-museum-4.jpg",
+            "https://example.com/indira-gandhi-museum-5.jpg"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Mumbai",
+      "type": "City",
+      "museums": [
+        {
+          "name": "Chhatrapati Shivaji Maharaj Vastu Sangrahalaya",
+          "description": "Formerly known as the Prince of Wales Museum, this museum houses artifacts from the Indus Valley Civilization and other historical periods of India.",
+          "location": "Mahatma Gandhi Road, Fort, Mumbai",
+          "photos": [
+            "https://example.com/csmvs-mumbai-1.jpg",
+            "https://example.com/csmvs-mumbai-2.jpg",
+            "https://example.com/csmvs-mumbai-3.jpg",
+            "https://example.com/csmvs-mumbai-4.jpg",
+            "https://example.com/csmvs-mumbai-5.jpg"
+          ]
+        },
+        {
+          "name": "Dr. Bhau Daji Lad Museum",
+          "description": "Mumbai's oldest museum showcasing the city's cultural heritage through a rare collection of fine and decorative arts.",
+          "location": "Rani Baug, Byculla East, Mumbai",
+          "photos": [
+            "https://example.com/bhau-daji-lad-1.jpg",
+            "https://example.com/bhau-daji-lad-2.jpg",
+            "https://example.com/bhau-daji-lad-3.jpg",
+            "https://example.com/bhau-daji-lad-4.jpg",
+            "https://example.com/bhau-daji-lad-5.jpg"
+          ]
+        },
+        {
+          "name": "RBI Monetary Museum",
+          "description": "This museum traces the evolution of money and coinage in India, from ancient times to the modern era.",
+          "location": "Amar Building, Sir Pherozeshah Mehta Road, Fort, Mumbai",
+          "photos": [
+            "https://example.com/rbi-museum-1.jpg",
+            "https://example.com/rbi-museum-2.jpg",
+            "https://example.com/rbi-museum-3.jpg",
+            "https://example.com/rbi-museum-4.jpg",
+            "https://example.com/rbi-museum-5.jpg"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Kolkata",
+      "type": "City",
+      "museums": [
+        {
+          "name": "Indian Museum",
+          "description": "The oldest and largest museum in India, featuring rare collections of antiques, armor, ornaments, fossils, and Mughal paintings.",
+          "location": "27, Jawaharlal Nehru Road, Kolkata",
+          "photos": [
+            "https://example.com/indian-museum-kolkata-1.jpg",
+            "https://example.com/indian-museum-kolkata-2.jpg",
+            "https://example.com/indian-museum-kolkata-3.jpg",
+            "https://example.com/indian-museum-kolkata-4.jpg",
+            "https://example.com/indian-museum-kolkata-5.jpg"
+          ]
+        },
+        {
+          "name": "Victoria Memorial",
+          "description": "A large marble building dedicated to Queen Victoria, now serving as a museum and tourist destination.",
+          "location": "Victoria Memorial Hall, 1, Queens Way, Kolkata",
+          "photos": [
+            "https://example.com/victoria-memorial-1.jpg",
+            "https://example.com/victoria-memorial-2.jpg",
+            "https://example.com/victoria-memorial-3.jpg",
+            "https://example.com/victoria-memorial-4.jpg",
+            "https://example.com/victoria-memorial-5.jpg"
+          ]
+        },
+        {
+          "name": "Netaji Bhawan",
+          "description": "This museum is dedicated to the life and work of Netaji Subhas Chandra Bose, showcasing personal artifacts and documents related to India's freedom struggle.",
+          "location": "38/2, Lala Lajpat Rai Sarani, Kolkata",
+          "photos": [
+            "https://example.com/netaji-bhawan-1.jpg",
+            "https://example.com/netaji-bhawan-2.jpg",
+            "https://example.com/netaji-bhawan-3.jpg",
+            "https://example.com/netaji-bhawan-4.jpg",
+            "https://example.com/netaji-bhawan-5.jpg"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Jaipur",
+      "type": "City",
+      "museums": [
+        {
+          "name": "Albert Hall Museum",
+          "description": "The oldest museum in Rajasthan, featuring a rich collection of artifacts including paintings, jewelry, carpets, and coins.",
+          "location": "Ram Niwas Garden, Jaipur",
+          "photos": [
+            "https://example.com/albert-hall-jaipur-1.jpg",
+            "https://example.com/albert-hall-jaipur-2.jpg",
+            "https://example.com/albert-hall-jaipur-3.jpg",
+            "https://example.com/albert-hall-jaipur-4.jpg",
+            "https://example.com/albert-hall-jaipur-5.jpg"
+          ]
+        },
+        {
+          "name": "City Palace Museum",
+          "description": "Located within the City Palace complex, this museum showcases royal artifacts and the heritage of the Maharajas of Jaipur.",
+          "location": "Tulsi Marg, Gangori Bazaar, Jaipur",
+          "photos": [
+            "https://example.com/city-palace-jaipur-1.jpg",
+            "https://example.com/city-palace-jaipur-2.jpg",
+            "https://example.com/city-palace-jaipur-3.jpg",
+            "https://example.com/city-palace-jaipur-4.jpg",
+            "https://example.com/city-palace-jaipur-5.jpg"
+          ]
+        },
+        {
+          "name": "Jaipur Wax Museum",
+          "description": "A unique museum featuring lifelike wax statues of historical figures, celebrities, and sports personalities.",
+          "location": "Amer Road, Jaipur",
+          "photos": [
+            "https://example.com/jaipur-wax-museum-1.jpg",
+            "https://example.com/jaipur-wax-museum-2.jpg",
+            "https://example.com/jaipur-wax-museum-3.jpg",
+            "https://example.com/jaipur-wax-museum-4.jpg",
+            "https://example.com/jaipur-wax-museum-5.jpg"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Karnataka",
+      "type": "State",
+      "museums": [
+        {
+          "name": "Government Museum, Bangalore",
+          "description": "One of the oldest museums in India, housing artifacts from the Mohenjodaro and Harappan civilizations, along with ancient coins and art.",
+          "location": "Kasturba Road, Bangalore",
+          "photos": [
+            "https://example.com/govt-museum-bangalore-1.jpg",
+            "https://example.com/govt-museum-bangalore-2.jpg",
+            "https://example.com/govt-museum-bangalore-3.jpg",
+            "https://example.com/govt-museum-bangalore-4.jpg",
+            "https://example.com/govt-museum-bangalore-5.jpg"
+          ]
+        },
+        {
+          "name": "Mysore Sand Sculpture Museum",
+          "description": "A unique museum featuring intricate sand sculptures depicting various themes from Indian mythology and history.",
+          "location": "Sri Harsha Road, Mysore",
+          "photos": [
+            "https://example.com/sand-sculpture-mysore-1.jpg",
+            "https://example.com/sand-sculpture-mysore-2.jpg",
+            "https://example.com/sand-sculpture-mysore-3.jpg",
+            "https://example.com/sand-sculpture-mysore-4.jpg",
+            "https://example.com/sand-sculpture-mysore-5.jpg"
+          ]
+        },
+        {
+          "name": "HAL Aerospace Museum",
+          "description": "India's first aerospace museum, showcasing the growth of the Indian aviation industry and HAL's contributions to Indian aviation.",
+          "location": "HAL Old Airport Road, Bangalore",
+          "photos": [
+            "https://example.com/hal-museum-1.jpg",
+            "https://example.com/hal-museum-2.jpg",
+            "https://example.com/hal-museum-3.jpg",
+            "https://example.com/hal-museum-4.jpg",
+            "https://example.com/hal-museum-5.jpg"
+          ]
+        }
+      ]
+    }
+  ]
+}
