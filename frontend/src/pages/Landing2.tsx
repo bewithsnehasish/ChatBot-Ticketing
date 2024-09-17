@@ -9,8 +9,26 @@ import {
   CarouselPrevious,
 } from "@/components/ui/carousel";
 import "../styles/landing.css";
+import { useEffect, useState } from "react";
 
 const LandingPage = () => {
+  const [isScrolled, setIsScrolled] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY > 0) {
+        setIsScrolled(true);
+      } else {
+        setIsScrolled(false);
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll);
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
   return (
     <div
       id="test"
@@ -23,24 +41,31 @@ const LandingPage = () => {
           id="test"
           className="w-full h-full object-cover"
         />
-        <div
-          id="test"
-          className="absolute inset-0 bg-gradient-to-b from-black/50 to-transparent"
-        >
-          <header id="test" className="container mx-auto px-4 py-6">
-            <div id="test" className="flex justify-between items-center">
-              <h1 id="test" className="text-3xl font-bold text-white">
+        <div id="test" className="absolute inset-0 bg-black bg-opacity-50">
+          <header
+            className={`sticky top-0 z-50 px-4 py-6 transition-colors duration-300 ${
+              isScrolled ? "bg-white shadow-md" : "bg-transparent"
+            }`}
+          >
+            <div className="container mx-auto flex justify-between items-center">
+              <h1
+                className={`text-3xl font-bold transition-colors duration-300 ${
+                  isScrolled ? "text-black" : "text-white"
+                }`}
+              >
                 INDIAN HERITAGE MUSEUM
               </h1>
-              <nav id="test" className="flex space-x-2">
+              <nav className="flex space-x-2">
                 {["Home", "Visit", "Museum", "Study", "Contact"].map((item) => (
                   <Button
                     key={item}
                     variant={item === "Study" ? "default" : "ghost"}
-                    className={`rounded-full text-white ${
+                    className={`rounded-full transition-colors duration-300 ${
                       item === "Study"
-                        ? "bg-green-700 hover:bg-green-600"
-                        : "hover:bg-white/20"
+                        ? "bg-green-700 hover:bg-green-600 text-white"
+                        : isScrolled
+                          ? "text-black hover:bg-gray-100"
+                          : "text-white hover:bg-white/20"
                     }`}
                   >
                     {item}
@@ -54,14 +79,56 @@ const LandingPage = () => {
             id="test"
             className="absolute inset-0 flex items-center justify-center"
           >
+            {/*
             <h2 id="test" className="text-6xl font-bold text-white text-center">
               Discover the rich heritage of India
             </h2>
+
+            */}
+
+            <div id="test" className="text-white text-center p-8">
+              <h3 id="test" className="text-4xl font-bold mb-4">
+                Upcoming Event: Royal Kings Of India
+              </h3>
+              <p id="test" className="text-xl mb-4">
+                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Error
+                doloremque vero, sequi quam repellat dignissimos maxime laborum
+                cum labore. Harum expedita obcaecati exercitationem?
+              </p>
+              <Button
+                size="lg"
+                id="test"
+                className="rounded-full bg-white text-green-800 hover:bg-green-100"
+              >
+                Learn More
+              </Button>
+            </div>
           </div>
         </div>
       </div>
 
       <main id="test" className="container mx-auto px-4 py-8">
+        {/*
+        <section className="mb-12">
+          <Card className="bg-gray-800">
+            <CardContent className="flex p-6">
+              <div className="flex-1">
+                <h1 className="text-4xl font-bold mb-4">
+                  Discover art with us
+                </h1>
+                <p className="mb-4">Explore the world of culture!</p>
+                <Button>Explore</Button>
+              </div>
+              <div className="flex-1">
+                <img
+                  src="https://picsum.photos/600/400"
+                  alt="Art discovery"
+                  className="rounded-lg"
+                />
+              </div>
+            </CardContent>
+          </Card>
+        </section> */}
         <section id="test" className="mb-16 text-center">
           <h2 id="test" className="text-5xl font-bold text-white mb-4">
             Discover the Rich Heritage of India
@@ -95,7 +162,7 @@ const LandingPage = () => {
             >
               <div id="test" className="text-white text-center p-8">
                 <h3 id="test" className="text-4xl font-bold mb-4">
-                  Upcoming Event: Royal Randwa Of India
+                  Upcoming Event: Royal Kings Of India
                 </h3>
                 <p id="test" className="text-xl mb-4">
                   Lorem ipsum dolor sit, amet consectetur adipisicing elit.
@@ -114,9 +181,131 @@ const LandingPage = () => {
           </div>
         </section>
 
+        <section className="flex flex-col md:flex-row items-center mb-16">
+          <div className="md:w-1/2 pr-8">
+            <img
+              src="https://picsum.photos/600/400"
+              alt="TMS Interface"
+              className="rounded-lg shadow-lg"
+            />
+          </div>
+          <div className="md:w-1/2">
+            <h1 className="text-4xl font-bold mb-4">What is TMS?</h1>
+            <p className="mb-4">
+              TMS is a revolutionary Chatbot-Based Museum Ticketing System that
+              simplifies the ticketing process for museums and their visitors.
+            </p>
+            <ul className="space-y-2">
+              <li className="flex items-start">
+                <span className="text-blue-500 mr-2">•</span>
+                <div>
+                  <strong>Chatbot Ticketing</strong>
+                  <p>
+                    An AI-driven chatbot that handles ticket bookings and
+                    inquiries seamlessly.
+                  </p>
+                </div>
+              </li>
+              <li className="flex items-start">
+                <span className="text-blue-500 mr-2">•</span>
+                <div>
+                  <strong>Integrated Payment Gateway</strong>
+                  <p>
+                    A secure payment system that ensures hassle-free
+                    transactions.
+                  </p>
+                </div>
+              </li>
+              <li className="flex items-start">
+                <span className="text-blue-500 mr-2">•</span>
+                <div>
+                  <strong>Data Insights</strong>
+                  <p>
+                    Analytics tools that provide valuable insights for smarter
+                    decision-making.
+                  </p>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </section>
+
+        <section className="flex flex-col md:flex-row items-center mb-16">
+          <div className="md:w-1/2 pr-8">
+            <h2 className="text-3xl font-bold mb-4">Why Choose TMS?</h2>
+            <p className="mb-4">
+              TMS is designed to enhance the visitor experience by addressing
+              common ticketing challenges faced by museums.
+            </p>
+            <ul className="space-y-2">
+              <li className="flex items-start">
+                <span className="text-blue-500 mr-2">•</span>
+                <div>
+                  <strong>Eliminate Long Queues</strong>
+                  <p>Reduce waiting times and improve visitor satisfaction.</p>
+                </div>
+              </li>
+              <li className="flex items-start">
+                <span className="text-blue-500 mr-2">•</span>
+                <div>
+                  <strong>Cost-Effective Solution</strong>
+                  <p>Lower operational costs with automated ticketing.</p>
+                </div>
+              </li>
+              <li className="flex items-start">
+                <span className="text-blue-500 mr-2">•</span>
+                <div>
+                  <strong>Multilingual Support</strong>
+                  <p>
+                    Cater to a diverse audience with support for multiple
+                    languages.
+                  </p>
+                </div>
+              </li>
+            </ul>
+          </div>
+          <div className="md:w-1/2">
+            <img
+              src="https://picsum.photos/500/400"
+              alt="TMS in action"
+              className="rounded-lg shadow-lg"
+            />
+          </div>
+        </section>
+
+        <section className="flex flex-col md:flex-row items-center">
+          <div className="md:w-1/2 pr-8">
+            <img
+              src="https://picsum.photos/600/400"
+              alt="TMS devices"
+              className="rounded-lg shadow-lg"
+            />
+          </div>
+          <div className="md:w-1/2">
+            <h2 className="text-3xl font-bold mb-4">How to Use TMS?</h2>
+            <p className="mb-4">
+              Follow these simple steps to revolutionize your museum ticketing.
+            </p>
+            <ol className="space-y-2 list-decimal list-inside">
+              <li>
+                <strong>Sign Up</strong>
+                <p>Create an account to access TMS features.</p>
+              </li>
+              <li>
+                <strong>Integrate with Your Museum</strong>
+                <p>Connect TMS with your existing systems.</p>
+              </li>
+              <li>
+                <strong>Launch the Chatbot</strong>
+                <p>Deploy the chatbot for ticketing and visitor inquiries.</p>
+              </li>
+            </ol>
+          </div>
+        </section>
+
         <section
           id="test"
-          className="mb-16 grid grid-cols-1 md:grid-cols-3 gap-8"
+          className="mt-16 mb-16 grid grid-cols-1 md:grid-cols-3 gap-8"
         >
           {[
             {
