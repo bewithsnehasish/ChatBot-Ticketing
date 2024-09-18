@@ -98,6 +98,19 @@ const Navbar = () => {
           >
             Upcoming Events
           </Button>
+
+          <Link to="/virtual">
+            <Button
+              variant="ghost"
+              className={`text-lg ${
+                isSticky
+                  ? "text-green-800 hover:text-green-600"
+                  : "text-white hover:text-green-300"
+              }`}
+            >
+              360 Virtual Tour
+            </Button>
+          </Link>
         </div>
       </div>
     </nav>

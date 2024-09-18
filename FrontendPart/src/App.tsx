@@ -2,6 +2,7 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import "./App.css";
 import AppLayout from "./layout/AppLayout";
 import HomePage from "./pages/HomePage";
+import Virtual from "./pages/Virtual";
 
 const router = createBrowserRouter([
   {
@@ -10,6 +11,10 @@ const router = createBrowserRouter([
       {
         path: "/",
         element: <HomePage />,
+      },
+      {
+        path: "/virtual",
+        element: <Virtual />,
       },
     ],
   },
