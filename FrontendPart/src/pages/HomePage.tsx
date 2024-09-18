@@ -141,72 +141,12 @@ const LandingPage = () => {
         </motion.div>
       </ImagesSlider>
       <main id="test" className="container mx-auto px-4 py-8">
-        {/*
-        <section className="mb-12">
-          <Card className="bg-gray-800">
-            <CardContent className="flex p-6">
-              <div className="flex-1">
-                <h1 className="text-4xl font-bold mb-4">
-                  Discover art with us
-                </h1>
-                <p className="mb-4">Explore the world of culture!</p>
-                <Button>Explore</Button>
-              </div>
-              <div className="flex-1">
-                <img
-                  src="https://picsum.photos/600/400"
-                  alt="Art discovery"
-                  className="rounded-lg"
-                />
-              </div>
-            </CardContent>
-          </Card>
-        </section> */}
-
         <section>
           <h1 className="text-4xl text-center font-bold mb-4">
             Wanna Book Your Ticket?
             <Ticket3D imageSrc={"/images/ticket.png"} />
           </h1>
         </section>
-
-        {/*
-        <section
-          id="test"
-          className="mb-16 bg-white rounded-lg overflow-hidden shadow-xl"
-        >
-          <div id="test" className="relative">
-            <img
-              src="https://picsum.photos/1200/400"
-              alt="Upcoming Event: Indian Royal Gala"
-              id="test"
-              className="w-full h-96 object-cover"
-            />
-            <div
-              id="test"
-              className="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center"
-            >
-              <div id="test" className="text-white text-center p-8">
-                <h3 id="test" className="text-4xl font-bold mb-4">
-                  Upcoming Event: Royal Kings Of India
-                </h3>
-                <p id="test" className="text-xl mb-4">
-                  Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-                  Error doloremque vero, sequi quam repellat dignissimos maxime
-                  laborum cum labore. Harum expedita obcaecati exercitationem?
-                </p>
-                <Button
-                  size="lg"
-                  id="test"
-                  className="rounded-full bg-white text-green-800 hover:bg-green-100"
-                >
-                  Learn More
-                </Button>
-              </div>
-            </div>
-          </div>
-        </section>
-          */}
 
         <section className="flex flex-col md:flex-row items-center mb-16">
           <div className="md:w-1/2 pr-8">
@@ -496,7 +436,7 @@ const LandingPage = () => {
           </Carousel>
         </section>
 
-        <section id="test" className="mb-16" id="support">
+        <section className="mb-16" id="support">
           <h3 id="test" className="text-3xl font-bold text-black mb-8">
             Support Our Mission
           </h3>
@@ -668,8 +608,8 @@ const LandingPage = () => {
                 </a>
               </li>
               <li>
-                <a href="#" id="test" className="hover:text-green-300">
-                  Upcoming Events
+                <a href="/virtual" className="hover:text-green-300">
+                  360 Virtual Tour
                 </a>
               </li>
             </ul>
