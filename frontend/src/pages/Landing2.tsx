@@ -10,6 +10,7 @@ import {
 } from "@/components/ui/carousel";
 import "../styles/landing.css";
 import { useEffect, useState } from "react";
+import "../styles/landing.css";
 
 const LandingPage = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -43,7 +44,7 @@ const LandingPage = () => {
         />
         <div id="test" className="absolute inset-0 bg-black bg-opacity-50">
           <header
-            className={`sticky top-0 z-50 px-4 py-6 transition-colors duration-300 ${
+            className={`fixed w-full top-0 z-50 px-4 py-6 transition-colors duration-300 ${
               isScrolled ? "bg-white shadow-md" : "bg-transparent"
             }`}
           >
