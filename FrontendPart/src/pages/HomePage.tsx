@@ -14,8 +14,9 @@ import { twMerge } from "tailwind-merge";
 import { TracingBeam } from "../components/ui/tracing-beam";
 import Ticket3D from "@/components/ui/3D-Ticket";
 import { data } from "../data";
-import { useCallback, useEffect, useState } from "react";
+import { useCallback, useEffect } from "react";
 import useEmblaCarousel from "embla-carousel-react";
+import Navbar from "../components/Navbar";
 
 const LandingPage = () => {
   const images = [
@@ -48,7 +49,7 @@ const LandingPage = () => {
           </p>
         </>
       ),
-      badge: "data.locations[0].name[0]",
+      badge: data.locations[0].museums[0].location,
       image: `http://localhost:5173/${data.locations[0].museums[0].photos[3]}`,
     },
     {
@@ -68,7 +69,7 @@ const LandingPage = () => {
           </p>
         </>
       ),
-      badge: "Payment Gateway",
+      badge: data.locations[1].museums[1].location,
       image: `http://localhost:5173/${data.locations[1].museums[1].photos[0]}`,
     },
     {
@@ -88,7 +89,7 @@ const LandingPage = () => {
           </p>
         </>
       ),
-      badge: "Analytics",
+      badge: data.locations[1].museums[2].location,
       image: `http://localhost:5173/${data.locations[1].museums[2].photos[0]}`,
     },
   ];
@@ -111,6 +112,7 @@ const LandingPage = () => {
 
   return (
     <div>
+      <Navbar />
       <ImagesSlider className="h-[60rem]" images={images}>
         <motion.div
           initial={{
@@ -414,7 +416,7 @@ const LandingPage = () => {
         </section>
           */}
 
-        <section>
+        <section id="museums">
           <TracingBeam className="px-6">
             <div className="max-w-2xl mx-auto antialiased pt-4 relative">
               {dummyContent.map((item, index) => (
@@ -450,27 +452,27 @@ const LandingPage = () => {
               {[
                 {
                   name: data.locations[0].museums[2].name,
-                  image: `http://localhost:5173/${data.locations[0].museums[2].photos[0]}`,
+                  image: `${data.locations[0].museums[2].photos[0]}`,
                 },
                 {
                   name: data.locations[1].museums[0].name,
-                  image: `http://localhost:5173/${data.locations[1].museums[0].photos[0]}`,
+                  image: `${data.locations[1].museums[0].photos[0]}`,
                 },
                 {
                   name: data.locations[2].museums[0].name,
-                  image: `http://localhost:5173/${data.locations[2].museums[0].photos[0]}`,
+                  image: `${data.locations[2].museums[0].photos[0]}`,
                 },
                 {
                   name: data.locations[3].museums[0].name,
-                  image: `http://localhost:5173/${data.locations[3].museums[0].photos[0]}`,
+                  image: `${data.locations[3].museums[0].photos[0]}`,
                 },
                 {
                   name: data.locations[4].museums[0].name,
-                  image: `http://localhost:5173/${data.locations[4].museums[0].photos[0]}`,
+                  image: `${data.locations[4].museums[0].photos[0]}`,
                 },
                 {
                   name: data.locations[4].museums[2].name,
-                  image: `http://localhost:5173/${data.locations[4].museums[2].photos[0]}`,
+                  image: `${data.locations[4].museums[0].photos[0]}`,
                 },
               ].map((museum, index) => (
                 <CarouselItem key={index}>
@@ -494,7 +496,7 @@ const LandingPage = () => {
           </Carousel>
         </section>
 
-        <section id="test" className="mb-16">
+        <section id="test" className="mb-16" id="support">
           <h3 id="test" className="text-3xl font-bold text-black mb-8">
             Support Our Mission
           </h3>
@@ -558,26 +560,29 @@ const LandingPage = () => {
           </div>
         </section>
 
-        <section id="test" className="mb-16 bg-opacity-90 rounded-lg p-8">
+        <section
+          id="upcoming-events"
+          className="mb-16 bg-opacity-90 rounded-lg p-8"
+        >
           <h3 id="test" className="text-3xl font-bold mb-8">
-            Upcoming Events
+            Upcoming Events Nearby You
           </h3>
           <div id="test" className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {[
               {
                 title: "Classical Dance Performance",
-                date: "June 15, 2024",
-                image: "https://picsum.photos/400/200?random=7",
+                date: "June 15, 2025",
+                image: "/images/image1.png",
               },
               {
-                title: "Gamelan Performance",
-                date: "June 22, 2024",
-                image: "https://picsum.photos/400/200?random=8",
+                title: "Textile Heritage Workshop",
+                date: "June 22, 2025",
+                image: "images/image.png",
               },
               {
-                title: "Wayang Kulit Show",
-                date: "July 1, 2024",
-                image: "https://picsum.photos/400/200?random=9",
+                title: "Lecture Series: Forgotten Empires",
+                date: "July 1, 2025",
+                image: "images/image2.png",
               },
             ].map((event, index) => (
               <div
@@ -639,7 +644,7 @@ const LandingPage = () => {
             <h4 id="test" className="font-bold text-lg mb-4">
               INDIAN HERITAGE MUSEUM
             </h4>
-            <p>Indian Heritage Museum,New Delhi,India,736101</p>
+            <p>Indian Heritage Museum,New Delhi,India,110001</p>
             <p>Open Tuesday - Sunday, 8:30 AM - 4:00 PM</p>
           </div>
           <div>
@@ -649,22 +654,22 @@ const LandingPage = () => {
             <ul>
               <li>
                 <a href="#" id="test" className="hover:text-green-300">
-                  About Us
-                </a>
-              </li>
-              <li>
-                <a href="#" id="test" className="hover:text-green-300">
-                  Exhibitions
-                </a>
-              </li>
-              <li>
-                <a href="#" id="test" className="hover:text-green-300">
-                  Education
+                  Museums
                 </a>
               </li>
               <li>
                 <a href="#" id="test" className="hover:text-green-300">
                   Support
+                </a>
+              </li>
+              <li>
+                <a href="#" id="test" className="hover:text-green-300">
+                  FAQ
+                </a>
+              </li>
+              <li>
+                <a href="#" id="test" className="hover:text-green-300">
+                  Upcoming Events
                 </a>
               </li>
             </ul>
