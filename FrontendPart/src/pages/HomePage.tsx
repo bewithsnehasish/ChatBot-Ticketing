@@ -17,6 +17,8 @@ import { data } from "../data";
 import { useCallback, useEffect } from "react";
 import useEmblaCarousel from "embla-carousel-react";
 import Navbar from "../components/Navbar";
+import { Card, CardHeader } from "@nextui-org/react";
+import { CardContent, CardTitle } from "@/components/ui/card";
 
 const LandingPage = () => {
   const images = [
@@ -105,7 +107,7 @@ const LandingPage = () => {
 
     const intervalId = setInterval(() => {
       scrollNext();
-    }, 3000); // Change slide every 5 seconds
+    }, 3000);
 
     return () => clearInterval(intervalId);
   }, [emblaApi, scrollNext]);
@@ -304,9 +306,7 @@ const LandingPage = () => {
           </div>
         </section>
 
-        {/*
         <section
-
           id="test"
           className="mt-16 mb-16 grid grid-cols-1 md:grid-cols-3 gap-8"
         >
@@ -354,7 +354,6 @@ const LandingPage = () => {
             </Card>
           ))}
         </section>
-          */}
 
         <section id="museums">
           <TracingBeam className="px-6">
